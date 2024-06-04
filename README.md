@@ -50,8 +50,10 @@ git clone https://github.com/monir6163/stride-backend.git
 
 ### 1. # .env
 
-SECRET_KEY=SECRET_KEY
-PORT=PORT
+- **SECRET_KEY**:
+  SECRET_KEY = SECRET_KEY
+- **PORT**:
+  PORT = PORT
 
 ### 2. npm install
 
