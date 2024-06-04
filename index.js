@@ -20,8 +20,8 @@ app.use("/api/v1", router);
 app.use(errorMiddleware);
 
 //db url
-let dataBaseUrl = `mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@cluster0.r1nyd.mongodb.net/stride?retryWrites=true&w=majority&appName=Cluster0`;
-mongoose.connect(dataBaseUrl, {}).then(() => {
+let data_BaseUrl = process.env.DATABASE_URL;
+mongoose.connect(data_BaseUrl, {}).then(() => {
   console.log("connected to db");
   app.listen(port, () => {
     console.log(`server is running on port ${port}`);
