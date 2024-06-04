@@ -7,18 +7,9 @@ class authServices {
     return registerData;
   };
 
-  changePassword = async (id, oldPassword, newPassword) => {
-    console.log({ id, oldPassword, newPassword });
-    const user = await User.findById(id).select("+password");
-    if (!user) {
-      throw new Error("User not found");
-    }
-    const isMatch = await bcrypt.compare(oldPassword, user.password);
-    if (!isMatch) {
-      throw new Error("Password not match");
-    }
-    user.password = newPassword;
-    await user.save();
+  changePassword = async (id, newPassword) => {
+    console.log({ id, newPassword });
+    const user = await User.findByIdAndUpdate(id, { password: newPassword });
     return user;
   };
 }
