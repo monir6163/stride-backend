@@ -20,9 +20,13 @@ app.use(errorMiddleware);
 
 //db url
 let data_BaseUrl = process.env.DATABASE_URL;
-mongoose.connect(data_BaseUrl, {}).then(() => {
-  console.log("connected to db");
-  app.listen(port, () => {
-    console.log(`server is running on port ${port}`);
+mongoose
+  .connect(
+    "mongodb+srv://monir:monir_nodejs_react@cluster0.r1nyd.mongodb.net/stride?retryWrites=true&w=majority&appName=Cluster0"
+  )
+  .then(() => {
+    console.log("connected to db");
+    app.listen(port, () => {
+      console.log(`server is running on port ${port}`);
+    });
   });
-});
