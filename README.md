@@ -8,10 +8,26 @@ Briefly describe what your project does. This project is a [brief description of
 
 ## Features
 
-- **Feature 1**: Description of feature 1.
-- **Feature 2**: Description of feature 2.
-- **Feature 3**: Description of feature 3.
-- **Feature 4**: Description of feature 4.
+- **User Authentication**:
+
+  - **Login**: Users can log in using their email and password.
+  - **Registration**: New users can create an account using their email and password.
+  - **Google Login**: Users can log in using their Google account.
+  - **Facebook Login**: Users can log in using their Facebook account.
+
+- **Dog Management**:
+
+  - **Add Dog**: Users can add information about a new dog to the system.
+  - **Delete Dog**: Users can delete a dog from the system.
+  - **Update Dog**: Users can update the information of an existing dog.
+
+- **Profile Management**:
+
+  - **Update Profile**: Users can update their personal profile information.
+  - **Update Password**: Users can update their password.
+
+- **Security**:
+  - **JWT Authentication**: All APIs are secured using JWT (JSON Web Token) authentication to ensure that only authorized users can access the resources.
 
 ## Prerequisites
 
@@ -32,6 +48,19 @@ Clone the repository to your local machine using the following command:
 git clone https://github.com/monir6163/stride-backend.git
 ```
 
+### 1. # .env
+
+SECRET_KEY=SECRET_KEY
+PORT=PORT
+
 ### 2. npm install
 
-### 3. env file setup
+```bash
+npm install
+```
+
+### 3. run
+
+```bash
+npm run dev
+```
