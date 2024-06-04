@@ -4,7 +4,7 @@ Dogs Bazar
 
 ## Description
 
-Briefly describe what your project does. This project is a [brief description of the project].
+Originally bred to herd cattle, sheep, and horses, the Pembroke Welsh Corgi is an active and intelligent dog breed. Easy to train and eager to learn, Pembrokes are great with children and other pets, and you can find then in four different coat colors
 
 ## Features
 
