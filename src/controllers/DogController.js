@@ -76,6 +76,19 @@ class dogController {
       next(error);
     }
   };
+
+  newTest = async (req, res, next) => {
+    try {
+      const filepath = req.file.path;
+      const { name } = req.body;
+
+      await DogServices.newTest({ filepath, name });
+
+      return res.status(200).json({ staus: true });
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 module.exports = new dogController();

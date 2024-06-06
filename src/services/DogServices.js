@@ -50,5 +50,10 @@ class dogServices {
     await DestroyCloudinary(dog.image.public_id);
     return await Dog.findByIdAndDelete(id);
   };
+
+  newTest = async ({ filepath, name }) => {
+    const url = await UploadCloudinary(filepath, "ecom/dog");
+    return url;
+  };
 }
 module.exports = new dogServices();
