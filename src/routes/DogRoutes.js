@@ -9,6 +9,8 @@ router.get("/getAll", dogController.getAllDogs);
 router.get("/getSingle", dogController.getSingleDog);
 router.patch("/update", middleware.auth, dogController.updateDog);
 router.delete("/delete", middleware.auth, dogController.deleteDog);
+router.post("/order/create", middleware.auth, dogController.createOrder);
+router.get("/order/getAll", middleware.auth, dogController.allOrders);
 
 //with multer
 router.post("/test", upload.single("myfile"), dogController.newTest);

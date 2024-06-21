@@ -77,6 +77,25 @@ class dogController {
     }
   };
 
+  createOrder = async (req, res, next) => {
+    try {
+      const bodyData = req.body;
+      const data = await DogServices.createOrder(bodyData);
+      return res.status(201).json({ status: true, data });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  allOrders = async (req, res, next) => {
+    try {
+      const data = await DogServices.allOrders();
+      return res.status(200).json({ status: true, data });
+    } catch (error) {
+      next(error);
+    }
+  };
+
   newTest = async (req, res, next) => {
     try {
       const filepath = req.file.path;

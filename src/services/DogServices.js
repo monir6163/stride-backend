@@ -3,6 +3,7 @@ const {
   DestroyCloudinary,
 } = require("../../utility/uploadImage");
 const Dog = require("../models/dogModel");
+const Order = require("../models/orderModel");
 
 class dogServices {
   create = async (data) => {
@@ -49,6 +50,24 @@ class dogServices {
     const dog = await Dog.findById(id);
     await DestroyCloudinary(dog.image.public_id);
     return await Dog.findByIdAndDelete(id);
+  };
+
+  createOrder = async (data) => {
+    return await Order.create({
+      name: data.name,
+      email: data.email,
+      address: data.address,
+      city: data.city,
+      country: data.country,
+      postalCode: data.postalCode,
+      p_name: data.p_name,
+      p_price: data.p_price,
+      p_id: data.p_id,
+    });
+  };
+
+  allOrders = async () => {
+    return await Order.find().sort({ createdAt: -1 });
   };
 
   newTest = async ({ filepath, name }) => {
