@@ -40,6 +40,19 @@ const orderSchema = new Schema(
       ref: "Dog",
       required: [true, "product id is require"],
     },
+    p_img: {
+      type: String,
+      required: [true, "product image is require"],
+    },
+    session_id: {
+      type: String,
+      required: [true, "session id is require"],
+    },
+
+    status: {
+      type: String,
+      default: "pending",
+    },
 
     createdAt: {
       type: Date,

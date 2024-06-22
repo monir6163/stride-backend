@@ -1,6 +1,7 @@
 const userRoutes = require("../routes/UserRoutes");
 const authRoutes = require("../routes/AuthRoutes");
 const dogRoutes = require("../routes/DogRoutes");
+const payRoutes = require("../routes/PaymentRoutes");
 const { Router } = require("express");
 const router = Router();
 
@@ -17,6 +18,10 @@ const moduleRoutes = [
   {
     path: "/dog",
     route: dogRoutes,
+  },
+  {
+    path: "/pay",
+    route: payRoutes,
   },
 ];
 

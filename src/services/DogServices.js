@@ -63,6 +63,7 @@ class dogServices {
       p_name: data.p_name,
       p_price: data.p_price,
       p_id: data.p_id,
+      p_img: data.p_img,
     });
   };
 
